@@ -18,16 +18,22 @@
             return Yes != null || No != null;
         }
 
-        public void SetYes(Node node)
+        public Node SetYes(string value)
         {
-            node.Parent = this;
-            Yes = node;
+            Yes = new Node(value)
+            {
+                Parent = this
+            };
+            return this;
         }
 
-        public void SetNo(Node node)
+        public Node SetNo(string value)
         {
-            node.Parent = this;
-            No = node;
+            No = new Node(value)
+            {
+                Parent = this
+            };
+            return this;
         }
     }
 }
